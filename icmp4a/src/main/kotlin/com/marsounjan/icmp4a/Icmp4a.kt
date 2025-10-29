@@ -296,7 +296,7 @@ class Icmp4a : Icmp {
 
                     delay(retryDelayMillis)
                 }
-                cancel(message = "Processed all of requested $count Echo messages")
+                close()
             } finally {
                 try {
                     Os.close(fd)
